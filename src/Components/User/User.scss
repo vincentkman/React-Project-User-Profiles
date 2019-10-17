@@ -1,0 +1,29 @@
+@import '../Utilities/Mixins'; 
+@import '../Utilities/Variables';
+@import '../Utilities/Extends';
+
+.User {
+    background: $white-smoke ;
+    width: 400px;
+    padding: 16px;
+    margin: 80px auto;
+    border-radius: $br--default;
+    text-align: center;
+    &:hover {
+        @extend %mouseover;
+        @extend %box-shadow;
+    }
+    img {
+        border-radius: $br--round;
+        border: $br--default solid $black;
+    }
+
+    h3 {
+        text-transform: capitalize;
+        letter-spacing: $letter-space ;
+        color: $light-black;
+    }
+}
+
+
+
