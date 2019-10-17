@@ -1,5 +1,5 @@
-@import './Components/Utilities/Mixins.scss'; 
-@import './Components/Utilities/Variables.scss';
+@import './Utilities/Mixins.scss'; 
+@import './Utilities/Variables.scss';
 
 .App {
     @include mq('medium') {
