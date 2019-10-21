@@ -1,5 +1,5 @@
 import React from 'react';
-import './User.scss';
+import './user.scss';
 
 function capitalise1stLetter(string) {
     return string.charAt(0).toUpperCase() +
@@ -16,7 +16,7 @@ function removeChar(string) {
 
 function User({ picture, firstname, lastname, gender, city, postcode, email, dob, phone, country }) {
     return (
-        <article className='User'>
+        <div className='User'>
             <img src={picture} alt={lastname} />
             <h3>First Name: {capitalise1stLetter(firstname)}</h3>
             <h3>Last Name: {capitalise1stLetter(lastname)}</h3>
@@ -27,7 +27,7 @@ function User({ picture, firstname, lastname, gender, city, postcode, email, dob
             <h3>DOB: {removeChar(dob)}</h3>
             <h3>Phone: {phone.split('-')}</h3>
             <h3>Country: {country}</h3>
-        </article>
+        </div>
     );
 }
 

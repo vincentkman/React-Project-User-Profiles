@@ -1,0 +1,16 @@
+@import '../../utilities/mixins.scss'; 
+@import '../../utilities/variables.scss';
+
+.userinfo {
+    @include mq('medium') {
+        @include grid(
+            $gap: 20px,
+            $temp-col: 1fr 1fr
+        )
+    }
+    @include mq('large') {
+        @include grid(
+            $temp-col: repeat(3, 1fr)
+        )
+    }
+}
