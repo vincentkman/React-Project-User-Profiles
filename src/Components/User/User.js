@@ -14,19 +14,19 @@ function removeChar(string) {
         .join('-');
 }
 
-function User({ picture, firstname, lastname, gender, city, postcode, email, dob, phone, country }) {
+function User(props) {
     return (
         <div className='User'>
-            <img src={picture} alt={lastname} />
-            <h3>First Name: {capitalise1stLetter(firstname)}</h3>
-            <h3>Last Name: {capitalise1stLetter(lastname)}</h3>
-            <h3>Gender: {capitalise1stLetter(gender)}</h3>
-            <h3>City: {capitalise1stLetter(city)}</h3>
-            <h3>Postcode: {postcode}</h3>
-            <h3>Email: {email}</h3>
-            <h3>DOB: {removeChar(dob)}</h3>
-            <h3>Phone: {phone.split('-')}</h3>
-            <h3>Country: {country}</h3>
+            <img src={props.picture} alt={props.lastname} />
+            <h3>First Name: {capitalise1stLetter(props.firstname)}</h3>
+            <h3>Last Name: {capitalise1stLetter(props.lastname)}</h3>
+            <h3>Gender: {capitalise1stLetter(props.gender)}</h3>
+            <h3>City: {capitalise1stLetter(props.city)}</h3>
+            <h3>Postcode: {props.postcode}</h3>
+            <h3>Email: {props.email}</h3>
+            <h3>DOB: {removeChar(props.dob)}</h3>
+            <h3>Phone: {props.phone.split('-')}</h3>
+            <h3>Country: {props.country}</h3>
         </div>
     );
 }
